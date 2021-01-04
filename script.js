@@ -41,6 +41,7 @@ function calculateAverageGrade() {
         $("#grade-needed").html("<em>Grade needed = </em>" + Math.round(gradeNeeded * 100)/100 + "%"); 
         checkMediaQuery("(max-height: 740px)", "1rem"); 
     }
+    $(document).scrollTop($(document).height());
 }
 
 function resetTable() {
