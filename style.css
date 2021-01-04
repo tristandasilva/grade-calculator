@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono:wght@400;800&family=Roboto:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    --calc-bg-color: #a995cc;
+    --secondary-bg-color: rgba(212, 255, 136, 0.78);
+    --answer-font: #174c33;
+}
+
+body {
+    background-color: #f2f3f4
+}
+
+/* Grade Table Labels */
+td, th {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Grade Calculator Title */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 800;
+}
+
+/* Main Container Including Title and Calculator */
+#container {
+    margin-top: 3rem;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control:focus {
+    box-shadow: inset 0px 0px 4px 0px var(--secondary-bg-color);
+}
+
+/* Calculator Container */
+#calc-form {
+    background-color: var(--calc-bg-color);
+    box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.78);
+    width: 30rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1.75rem;
+}
+
+.form-group {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    width: 85%;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.75rem auto;
+}
+
+button {
+    width: 10rem;
+}
+
+#desired-grade, .input-group-text {
+    margin-top: 1rem;
+    height: 2.75rem;
+    padding: 2px;
+}
+
+#desired-grade {
+    padding: 0.75rem;
+    margin-left: 1rem;
+}
+
+/* Find Grade Needed Prompt Text */
+label {
+    width: 70%;
+    font-weight: 500;
+}
+
+/* Answer container with average grade and grade needed */
+.answer-container {
+    width: 81%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--secondary-bg-color);
+    border: none;
+    text-align: center;
+}
+
+p {
+    font-weight: 700;
+    margin: 0;
+    color: var(--answer-font);
+}
+
+@media only screen and (max-width: 300px) {
+    .answer-container {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #container {
+        margin-top: 0.25rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    #calc-form {
+        width: 95%;
+    }
+
+    th {
+        font-size: 0.95rem;
+    }
+
+    button:first-of-type {
+        margin-bottom: 1rem;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    #desired-grade {
+        padding: 0.25rem;
+    }
+}
+
+@media only screen and (max-height: 740px) {
+    #container {
+        margin-top: 0.25rem;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">   
+    <!-- Title -->
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Grade Calculator</h1>
+        <form id="calc-form" class="rounded-3">
+            <div class="form-group">
+                <!-- Grade and Weight Input Boxes -->
+                <table class="table table-borderless">
+                    <tr>    
+                        <th scope="col">#</th>
+                        <th scope="col">Grade (%)</th>
+                        <th scole="col">Weight (%)</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><input class="form-control grade" type="number" min="0"></td>
+                        <td><input class="form-control weight" type="number" min="0"></td>
+                    </tr>
+                 </table>
+            </div>
+            <!-- Find Grade Needed On Remaining Assignments -->
+            <div class="input-group form-group slide-out">
+                <label for="desired-grade">Find grade needed on the rest of the coursework to finish with an average of:</label> 
+                <input type="number" min="0" class="form-control" name="desired-grade" id="desired-grade">
+                <span class="input-group-text" id="inputGroup-sizing-default">%</span>    
+            </div>
+            <!-- Calculate and Reset Buttons -->
+            <div id="button-container" class="form-group slide-out">
+                <button type="button" class="btn btn-dark" onclick="calculateAverageGrade()">Calculate</button>
+                <button type="button" class="btn btn-dark" onclick="resetTable()">Reset</button>
+            </div>
+            <!-- Answer Box -->
+            <div class="alert answer-container" hidden>
+                <p id="average-grade"></p>
+                <p id="grade-needed"></p>
+            </div>
+        </form>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- Custom Javascript -->    
+    <script src="script.js"></script>
+</body>
+</html>
